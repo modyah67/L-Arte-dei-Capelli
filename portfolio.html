@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- خطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lexend:wght@100..900&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- أيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- الستايل -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <title>لآرتي دي كابيلي | معرض أعمالنا</title>
+</head>
+<body>
+
+<header> 
+    <h2><a href="index.html">L’Arte dei Capelli</a></h2> 
+    <h3>فريزر</h3> 
+    
+    <!-- زرار تبديل اللغة -->
+    <div class="language-switcher">
+      <button onclick="switchLanguage('ar')" id="btn-ar" class="active">🇪🇬 عربي</button>
+      <button onclick="switchLanguage('en')" id="btn-en">🇬🇧 English</button>
+    </div>
+</header> 
+
+<!-- قوائم الموبايل - ثنائية اللغة -->
+<details class="mobile-menu medium"> 
+    <summary> 
+        <i class="fa-solid fa-bars"></i> 
+        <i class="fa-solid fa-xmark"></i> 
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details> 
+
+<details class="mobile-menu small"> 
+    <summary class="toggle-button"> 
+        <span class="toggle-text open"><i class="fa-solid fa-bars"></i> افتح القائمة</span>
+        <span class="toggle-text close"><i class="fa-solid fa-xmark"></i> اغلق القائمة</span>
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details>
+
+<!-- قائمة الكمبيوتر - ثنائية اللغة -->
+<nav class="desktop-menu">
+  <ul>
+    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+    <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li>
+    <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+    <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li>
+    <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+  </ul>
+</nav>
+<main>
+    <div class="portfolio-div-fixed">
+        <img src="bilder/index_box2.avif" alt="صورة 1">
+        <img src="bilder/index_box3.avif" alt="صورة 2">
+        <img src="bilder/leistungen_von2.avif" alt="صورة 3">
+        <p>⬇</p>
+    </div>
+
+    <section id="portfolio">
+        <article>
+            <h1 data-en="YOUR HAIRDRESSING SALON IN BERLIN – YOUR FEEL-GOOD PLACE">صالونك لتصفيف الشعر في برلين – مكان راحتك</h1>
+            <hr>
+            <p data-en="In 2013 we launched our newly designed and modern salon with workshop character in Berlin. In the modern and bright interior, you as a customer are at the center of everything. There is enough space for every customer to fully relax and recover from everyday stress. Our team takes a lot of time for you to skillfully implement your wishes. With our care concepts from La Biosthétique we ideally respond to the needs of your hair and skin. Look forward to an exclusive visit in our salon, where our highly trained staff will advise you according to your type and needs.">
+                في عام 2013 انطلق صالوننا المصمم حديثًا والعصري بطابع ورشة العمل في برلين. في التصميم الحديث والمشرق أنت كعميل في مركز كل شيء. هناك مساحة كافية لكل عميل للاسترخاء التام والابتعاد عن ضغوط الحياة اليومية. يأخذ فريقنا وقتًا كافيًا لتنفيذ رغباتك بمهارة. باستخدام مفاهيم العناية من La Biosthétique نلبي احتياجات شعرك وبشرتك بشكل مثالي. استمتع بزيارة حصرية في صالوننا حيث يقدم لك موظفونا المدربون استشارة حسب نوعك واحتياجاتك.
+            </p>
+        </article>ئ
+
+        <article>
+            <h2 data-en="Impressions from the hair salon">لقطات من داخل الصالون</h2>
+            <div>            
+                <img src="bilder/portfolio_1.avif" alt="صورة 1">
+                <img src="bilder/portfolio_2.avif" alt="صورة 2">
+                <img src="bilder/portfolio_3.avif" alt="صورة 3">
+                <img src="bilder/portfolio_4.avif" alt="صورة 4">
+                <img src="bilder/portfolio_5.avif" alt="صورة 5">
+                <img src="bilder/portfolio_6.avif" alt="صورة 6">
+                <img src="bilder/portfolio_7.avif" alt="صورة 7">
+                <img src="bilder/portfolio_8.avif" alt="صورة 8">
+            </div>
+        </article>
+
+        <article>
+            <p data-en="We are very happy to be at your disposal for all your questions about hair, skin and make-up! So take a seat and look forward to our team, which is there for you in all hair and beauty matters.">
+                نحن سعداء جدًا بأن نكون في خدمتك للإجابة على كل أسئلتك حول الشعر والبشرة والمكياج! اجلس واسترخِ واستمتع مع فريقنا الذي يقف بجانبك في كل ما يتعلق بالشعر والجمال.
+            </p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <div> 
+        <a href="kontakt.html">اتصل بنا</a>
+        <a href="tel:01105263199">01105263199</a>
+        <a href="#">إمبريسوم</a>
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">فيسبوك</a>
+        <a href="#">إنستغرام</a>
+    </div>
+    <p>لآرتي دي كابيلي فريزر 2013–2026</p>
+</footer>
+
+<!-- زرار واتساب مثبت -->
+<a href="https://wa.me/201105263199?text=مرحبا%2C%20عايز%20أحجز%20موعد%20في%20لآرتي%20دي%20كابيلي" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+<script>
+function switchLanguage(lang) {
+
+document.documentElement.lang = lang;
+document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+document.querySelectorAll('[data-en]').forEach(el => {
+
+if (!el.hasAttribute('data-ar')) {
+el.setAttribute('data-ar', el.innerHTML);
+}
+
+if (lang === 'en') {
+el.innerHTML = el.getAttribute('data-en');
+} else {
+el.innerHTML = el.getAttribute('data-ar');
+}
+
+});
+
+document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+}
+</script>
+
+
+</body>
+</html>

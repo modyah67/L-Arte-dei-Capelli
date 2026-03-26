@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<title data-en="Contact Us">اتصل بنا</title>
+
+<style>
+
+/* ===== RESET ===== */
+body{
+margin:0;
+font-family: 'Roboto', sans-serif;
+background:#f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header{
+display:flex;
+justify-content:space-between;
+padding:15px 20px;
+background:black;
+color:white;
+}
+
+/* ===== HERO ===== */
+.hero{
+height:50vh;
+background:url('bilder/leistungen_bild1.avif') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:2rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+padding:50px;
+}
+
+/* كروت */
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* الفورم */
+input, textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:black;
+color:rgb(253, 253, 253);
+padding:12px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* معلومات */
+.info-box h3{
+color:black;
+}
+
+/* خريطة */
+iframe{
+width:100%;
+border-radius:10px;
+}
+
+/* واتساب */
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2 data-en="L’Arte dei Capelli">لآرتي دي كابيلي</h2>
+
+<div>
+<button onclick="switchLanguage('ar')">AR</button>
+<button onclick="switchLanguage('en')">EN</button>
+</div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<h1 data-en="Contact Us">اتصل بنا</h1>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-container">
+
+<!-- الفورم -->
+<div class="card">
+<h2 data-en="Send Message">ابعت رسالة</h2>
+
+<input type="text" id="name" placeholder="اسمك">
+<input type="email" id="email" placeholder="بريدك">
+<textarea id="msg" placeholder="رسالتك"></textarea>
+
+<button onclick="sendMessage()">إرسال</button>
+</div>
+
+<!-- معلومات -->
+<div class="card info-box">
+
+<h3 data-en="Phone">رقم التليفون</h3>
+<p>01105263199</p>
+
+<h3 data-en="Working Hours">مواعيد العمل</h3>
+<p>9 صباحاً - 10 مساءً</p>
+
+<h3 data-en="Address">العنوان</h3>
+<p>القاهرة - مصر</p>
+
+<button onclick="bookNow()" style="margin-top:15px;">
+احجز الآن
+</button>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+<div style="padding:30px;">
+<iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/201105263199" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* ===== LANGUAGE ===== */
+function switchLanguage(lang){
+document.documentElement.lang=lang;
+document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+
+document.querySelectorAll('[data-en]').forEach(el=>{
+if(!el.dataset.ar) el.dataset.ar=el.innerHTML;
+el.innerHTML=lang==='en'?el.dataset.en:el.dataset.ar;
+});
+}
+
+/* ===== SEND MESSAGE ===== */
+function sendMessage(){
+let name=document.getElementById('name').value;
+let msg=document.getElementById('msg').value;
+
+let text=`الاسم: ${name} - الرسالة: ${msg}`;
+window.open(`https://wa.me/201105263199?text=${encodeURIComponent(text)}`);
+}
+
+/* ===== BOOK ===== */
+function bookNow(){
+window.open(`https://wa.me/201105263199?text=عايز احجز موعد`);
+}
+
+</script>
+
+</body>
+</html>

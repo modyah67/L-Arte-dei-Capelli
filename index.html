@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- خطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lexend:wght@100..900&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- أيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- الستايل -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <title>L’Arte dei Capelli | صالون تصفيف الشعر</title>
+</head>
+<body>
+
+<header> 
+    <div class="header-container">
+        <!-- اللوجو والاسم -->
+        <div class="logo">
+            <h2><span class="brand-name">L’Arte dei Capelli</span></h2>
+            <h3><a href="index.html" data-en="frezar" data-ar="فريزر">فريزر</a></h3>
+        </div>
+        
+        <!-- زرار تبديل اللغة -->
+        <div class="language-switcher">
+            <button onclick="switchLanguage('ar')" id="btn-ar" class="active">🇪🇬 عربي</button>
+            <button onclick="switchLanguage('en')" id="btn-en">🇬🇧 English</button>
+        </div>
+    </div>
+</header>
+
+<!-- قوائم الموبايل - ثنائية اللغة -->
+<details class="mobile-menu medium"> 
+    <summary> 
+        <i class="fa-solid fa-bars"></i> 
+        <i class="fa-solid fa-xmark"></i> 
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details> 
+
+<details class="mobile-menu small"> 
+    <summary class="toggle-button"> 
+        <span class="toggle-text open"><i class="fa-solid fa-bars"></i> افتح القائمة</span>
+        <span class="toggle-text close"><i class="fa-solid fa-xmark"></i> اغلق القائمة</span>
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details>
+
+<!-- قائمة الكمبيوتر - ثنائية اللغة -->
+<nav class="desktop-menu">
+  <ul>
+    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+    <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li>
+    <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+    <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li>
+    <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+  </ul>
+</nav>
+
+<main>
+    <section id="hero1">
+        <h2 data-en="L’Arte dei Capelli" data-ar="L’Arte dei Capelli">L’Arte dei Capelli</h2>
+        <p data-en="Pure Beauty • Timeless Elegance" data-ar="جمال نقي • أناقة خالدة">Pure Beauty • Timeless Elegance</p>
+       <button class="booking-btn">
+    <a href="tel:01105263199" 
+       data-en="Book Your Appointment Now - 01105263199" 
+       data-ar="احجز موعدك الآن - 01105263199">
+        احجز موعدك الآن - 01105263199
+    </a>
+</button>
+        <a href="#hero2" class="scroll-down">⬇</a>
+    </section>
+
+    <section id="hero2">
+        <h1 data-en="Welcome to L’Arte dei Capelli Hair Salon">أهلاً بك في صالون لآرتي دي كابيلي</h1>
+        <hr>
+        <p data-en="Since 2013, we create exceptional hair art with passion and precision in the heart of Berlin. Your comfort and confidence are our top priority. With experienced stylists, premium products, and personalized service, we deliver luxury hair experiences.">
+            منذ عام 2013، نصنع فن الشعر الاستثنائي بشغف ودقة في قلب برلين. راحتك وثقتك هما أولويتنا الأولى. بفريق محترف ومنتجات فاخرة وخدمة شخصية، نقدم لك تجربة شعر فاخرة.
+        </p>
+        <p data-en="We are delighted to welcome you!<br><strong>Team L’Arte dei Capelli</strong>">نحن سعداء باستقبالك!<br><strong>فريق لآرتي دي كابيلي</strong></p>
+
+        <article>
+            <div class="box boxLeft">        
+                <div>
+                    <h2 data-en="Space for Creative Hair Art">مساحة إبداعية لفن الشعر</h2>
+                    <hr>
+                    <p data-en="In the heart of Berlin's old town, on 140 m² we create individual looks, restore shine, set trends and highlight your personal style. The result is hair art that makes you feel confident and beautiful.">
+                        في قلب برلين القديمة، على مساحة 140 متر مربع نقوم بتصميم إطلالات فريدة، نعيد للشعر لمعانه، نضع التريندات ونبرز أسلوبك الشخصي. النتيجة فن شعر يجعلك تشعر بالثقة والجمال.
+                    </p>
+                    <a href="team.html" data-en="Meet the Team">تعرف على الفريق</a>
+                </div>
+                <img src="bilder/index_box1.avif" alt="صورة 1" loading="lazy">
+            </div>
+
+            <div class="box">        
+                <div>
+                    <h2 data-en="We Love Color – In All Its Glory">نحن نحب اللون – في كل مجده</h2>
+                    <hr>
+                    <p data-en="Premium Schwarzkopf color treatments deliver rich, glossy and vibrant shades with intensive care. Every color is tailored to your personality and style.">
+                        علاجات اللون الفاخرة من Schwarzkopf تعطي ألواناً غنية ولامعة وحيوية مع عناية مكثفة. كل لون مصمم حسب شخصيتك وأسلوبك.
+                    </p>
+                    <a href="leistungen.html" data-en="View Services">شاهد الخدمات</a>
+                </div>
+                <img src="bilder/index_box2.avif" alt="صورة 2" loading="lazy">
+            </div>
+
+            <div class="box boxLeft">        
+                <div>
+                    <h2 data-en="Long Hair – Naturally Beautiful">شعر طويل – جمال طبيعي</h2>
+                    <hr>
+                    <p data-en="Using expert techniques and premium Great Lengths extensions, we create long, healthy and naturally beautiful hair in the shortest time possible.">
+                        باستخدام تقنيات متخصصة وإكستنشن Great Lengths الفاخرة، نصنع شعراً طويلاً صحياً وجميلاً طبيعياً في أقصر وقت.
+                    </p>
+                    <a href="tel:01105263199" data-en="Book Appointment">احجز موعد</a>
+                </div>
+                <img src="bilder/index_box3.avif" alt="صورة 3" loading="lazy">
+            </div>
+
+            <div class="box">        
+                <div>
+                    <h2 data-en="Men’s Area – Style & Comfort">قسم الرجال – أناقة وراحة</h2>
+                    <hr>
+                    <p data-en="A stylish separate men’s area with premium service. Enjoy a refreshing drink while we create your perfect modern look.">
+                        قسم خاص أنيق للرجال مع خدمة فاخرة. استمتع بمشروب منعش بينما نصنع لك إطلالتك الحديثة المثالية.
+                    </p>
+                    <a href="tel:01105263199" data-en="Book Consultation">احجز استشارة</a>
+                </div>
+                <img src="bilder/index_box4.avif" alt="صورة 4" loading="lazy">
+            </div>
+        </article>
+    </section>
+
+    <section id="bewertungen" class="bewertungen-section">
+      <h2 data-en="What Our Clients Say">ماذا يقول عملاؤنا</h2>
+      <div class="bewertungen-grid">
+        <article class="bewertung">
+          <p>"أنا مبهورة! استشارة رائعة وقصة مثالية."</p>
+          <span>– Anna K.</span>
+        </article>
+        <article class="bewertung">
+          <p>"زيارة تستحق التكرار دائمًا. أجواء رائعة!"</p>
+          <span>– Jonas P.</span>
+        </article>
+        <article class="bewertung">
+          <p>"تسريحة عروسة كانت حلماً. شكرًا للفريق!"</p>
+          <span>– Lara M.</span>
+        </article>
+        <article class="bewertung">
+          <p>"سريع، ودود ومحترف. أوصي به بشدة."</p>
+          <span>– Lisa T.</span>
+        </article>
+      </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-links"> 
+        <a href="kontakt.html" data-en="Contact Us">اتصل بنا</a>
+        <a href="tel:01105263199">01105263199</a>
+        <a href="#" data-en="Imprint">إمبريسوم</a>
+        <a href="#" data-en="Privacy Policy">سياسة الخصوصية</a>
+        <a href="#" data-en="Facebook">فيسبوك</a>
+        <a href="#" data-en="Instagram">إنستغرام</a>
+    </div>
+    <p data-en="L’Arte dei Capelli Hair Salon 2013–2026">لآرتي دي كابيلي فريزر 2013–2026</p>
+</footer>
+
+<script>
+// دالة تبديل اللغة
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if (!el.hasAttribute('data-ar')) {
+            el.setAttribute('data-ar', el.textContent.trim());
+        }
+        el.textContent = (lang === 'ar') ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    });
+
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
+
+</body>
+</html>

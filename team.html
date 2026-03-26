@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- خطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lexend:wght@100..900&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- أيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- الستايل -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <title>L’Arte dei Capelli | Our Team</title>
+</head>
+<body>
+
+<!-- Header محسن - اللوجو في الوسط -->
+<header> 
+    <div class="header-container">
+        <div class="logo">
+            <h2><a href="index.html">L’Arte dei Capelli</a></h2> 
+            <h3>فريزر</h3>
+        </div>
+        
+        <!-- زرار تبديل اللغة -->
+        <div class="language-switcher">
+          <button onclick="switchLanguage('ar')" id="btn-ar" class="active">🇪🇬 عربي</button>
+          <button onclick="switchLanguage('en')" id="btn-en">🇬🇧 English</button>
+        </div>
+    </div>
+</header> 
+
+<!-- قوائم الموبايل - ثنائية اللغة -->
+<details class="mobile-menu medium"> 
+    <summary> 
+        <i class="fa-solid fa-bars"></i> 
+        <i class="fa-solid fa-xmark"></i> 
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details> 
+
+<details class="mobile-menu small"> 
+    <summary class="toggle-button"> 
+        <span class="toggle-text open"><i class="fa-solid fa-bars"></i> افتح القائمة</span>
+        <span class="toggle-text close"><i class="fa-solid fa-xmark"></i> اغلق القائمة</span>
+    </summary> 
+    <ul> 
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+    </ul> 
+</details>
+
+<nav class="desktop-menu">
+  <ul>
+    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+    <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li>
+    <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+    <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li>
+    <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+  </ul>
+</nav>
+
+<main>
+<section class="about-us" id="team">
+  <h2 data-en="Our Hairdressers – Your Stylists">فريقنا – مصففوك المميزون</h2>
+  <hr>
+  <p data-en="We rely on competence and a sure instinct. A highly qualified team is at work for us. In further training and workshops, we regularly refine our skills to bring out your personal style.">
+    نحن نعتمد على الكفاءة والحساسية العالية. لدينا فريق مؤهل جداً يعمل معنا. في الدورات التدريبية والتدريبات نطور مهاراتنا بانتظام لإبراز أسلوبك الشخصي.
+  </p>
+
+  <div class="team-grid">
+    <article>
+      <img src="bilder/team_1.avif" alt="مصففة" loading="lazy">
+      <h3>Lisa</h3>
+      <ul>
+        <li data-en="Haircuts for women">قصات الشعر للسيدات</li>
+        <li data-en="Bridal and event hairstyles">تسريحات العرائس والمناسبات</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="bilder/team_2.avif" alt="مصفف" loading="lazy">
+      <h3>Markus</h3>
+      <ul>
+        <li data-en="Men's haircuts">قصات الشعر للرجال</li>
+        <li data-en="Beard care">عناية اللحية</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="bilder/team_3.avif" alt="مصففة أنجا" loading="lazy">
+      <h3>Anja</h3>
+      <ul>
+        <li data-en="Style consultation">استشارة الإطلالة</li>
+        <li data-en="Hair care & scalp diagnostics">عناية الشعر وتشخيص فروة الرأس</li>
+        <li data-en="Perm">تجعيد دائم</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="bilder/team_4.avif" alt="مصففة سابينا" loading="lazy">
+      <h3>Sabina</h3>
+      <ul>
+        <li data-en="Updo hairstyles">تسريحات الرفع والتثبيت</li>
+        <li data-en="Gray hair coverage">تغطية الشعر الرمادي</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="bilder/team_5.avif" alt="موظفة نيله" loading="lazy">
+      <h3>Nele</h3>
+      <ul>
+        <li data-en="Back office">الأعمال المكتبية</li>
+        <li data-en="Social Media">وسائل التواصل الاجتماعي</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="bilder/team_6.avif" alt="مصففة ميلينا" loading="lazy">
+      <h3>Melina</h3>
+      <ul>
+        <li data-en="Top Stylist">مصففة مميزة</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="modelle">
+    <h3 data-en="MODELS WANTED">نبحث عن عارضات</h3>
+    <p data-en="On their way to becoming first-class stylists, our apprentices are always looking for practice models. The model times are always under the guidance of a trained professional and take place by appointment. Depending on the year of training, you will receive a discount on all services.">
+        في طريقهم ليصبحوا مصففين من الدرجة الأولى، يبحث متدربونا دائمًا عن عارضات للتدريب. جلسات التدريب تتم دائمًا تحت إشراف مصفف محترف وبعد التنسيق. حسب سنة التدريب، تحصلون على خصم على جميع الخدمات.
+    </p>
+</section>
+
+<section class="zertifikat">
+    <h2 data-en="Our Awards">شهاداتنا وإنجازاتنا</h2>   
+    <img src="bilder/zerifikat1.png" alt="شهادة 1" loading="lazy">
+    <img src="bilder/zerifikat2.png" alt="شهادة 2" loading="lazy">
+    <img src="bilder/zerifikat3.png" alt="شهادة 3" loading="lazy">
+</section>
+</main>
+
+<footer>
+    <div class="footer-links"> 
+        <a href="kontakt.html" data-en="Contact Us">اتصل بنا</a>
+        <a href="tel:01105263199">01105263199</a>
+        <a href="#" data-en="Imprint">إمبريسوم</a>
+        <a href="#" data-en="Privacy Policy">سياسة الخصوصية</a>
+        <a href="#" data-en="Facebook">فيسبوك</a>
+        <a href="#" data-en="Instagram">إنستغرام</a>
+    </div>
+    <p data-en="L’Arte dei Capelli Hair Salon 2013–2026">لآرتي دي كابيلي فريزر 2013–2026</p>
+</footer>
+
+<script>
+// دالة تبديل اللغة المحسنة
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if (!el.hasAttribute('data-ar')) {
+            el.setAttribute('data-ar', el.textContent.trim());
+        }
+        el.textContent = (lang === 'ar') ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    });
+
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
+
+</body>
+</html>
