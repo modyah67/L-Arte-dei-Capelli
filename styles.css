@@ -34,45 +34,65 @@ header h2 a,
     color: #222222 !important;
 }
 
-/* ====================== LANGUAGE SWITCHER ====================== */
-/* زرار تبديل اللغة */
+/* ====================== LANGUAGE SWITCHER - محسن ومصغر ====================== */
 .language-switcher {
-  position: absolute;
-  top: 18px;
-  right: 25px;
-  display: flex;
-  background: rgba(255,255,255,0.95);
-  border: 2px solid var(--black);
-  border-radius: 50px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-  z-index: 30;
-  backdrop-filter: blur(6px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--black);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    z-index: 30;
+    backdrop-filter: blur(8px);
+    height: 42px;           /* ارتفاع أصغر */
+    padding: 0;
 }
 
 .language-switcher button {
-  padding: 11px 24px;
-  font-size: 1.02rem;
-  font-weight: 600;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.35s ease;
-  color: var(--black);
+    padding: 0 22px;
+    font-size: 0.95rem;     /* حجم الخط أصغر */
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    color: var(--black);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .language-switcher button:hover {
-  background: #f5f5f5;
+    background: #f5f5f5;
 }
 
 .language-switcher button.active {
-  background: var(--black);
-  color: white;
+    background: var(--black);
+    color: white;
 }
 
+/* تعديل للـ RTL (العربي) */
 html[dir="rtl"] .language-switcher {
-  right: auto;
-  left: 25px;
+    right: auto;
+    left: 20px;
+}
+
+/* تحسين على الموبايل */
+@media (max-width: 768px) {
+    .language-switcher {
+        height: 38px;
+        right: 15px;
+    }
+    
+    .language-switcher button {
+        padding: 0 18px;
+        font-size: 0.9rem;
+    }
 }
 
 /* ====================== HEADER ====================== */
@@ -376,25 +396,152 @@ header h3::after {
 .zertifikat img:hover {
   transform: scale(1.03);
 }
+/* ====================== MOBILE MENU - تحسين المكان والشكل ====================== */
 
-/* ====================== RESPONSIVE ====================== */
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    text-align: center;
+    flex: 1;
+}
+
+/* ====================== MOBILE MENU - النسخة النهائية النظيفة ====================== */
+
+/* إخفاء الديسكتوب مينيو وإظهار الموبايل مينيو */
+@media (max-width: 1050px) {
+    .desktop-menu { 
+        display: none; 
+    }
+    
+    .mobile-menu.medium { 
+        display: block; 
+    }
+    
+    .mobile-menu.small { 
+        display: none; 
+    }
+}
+
 @media (max-width: 768px) {
-  .about-us {
-    padding: 140px 15px 80px;
-  }
-  
-  .about-us h2 {
-    font-size: 2.2rem;
-  }
-  
-  .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .team-grid img {
-    height: 280px;
-  }
+    .mobile-menu.medium { 
+        display: none; 
+    }
+    .mobile-menu.small { 
+        display: block; 
+    }
+}
+
+/* ====================== ستايل زرار الموبايل مينيو ====================== */
+.mobile-menu summary {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 14px;
+    background: #222222;
+    color: white;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    z-index: 30;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu summary:hover {
+    background: #111111;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+/* الأيقونات */
+.mobile-menu .fa-bars,
+.mobile-menu .fa-xmark {
+    font-size: 1.55rem;
+}
+
+/* إخفاء X في البداية */
+.mobile-menu .fa-xmark {
+    display: none;
+}
+
+/* عند فتح القائمة */
+.mobile-menu[open] .fa-bars {
+    display: none;
+}
+.mobile-menu[open] .fa-xmark {
+    display: inline-block;
+}
+
+/* ====================== محتوى القائمة المنسدلة ====================== */
+.mobile-menu ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 999;
+    border-top: 1px solid #ddd;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 16px 25px;
+    color: #222;
+    text-decoration: none;
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:active {
+    background: #f9f9f9;
+    color: #000;
+}
+
+/* ====================== تحسين النسخة Small ====================== */
+.mobile-menu.small .toggle-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-menu.small .toggle-text.close {
+    display: none;
+}
+
+.mobile-menu.small[open] .toggle-text.open {
+    display: none;
+}
+
+.mobile-menu.small[open] .toggle-text.close {
+    display: flex;
 }
 
 @keyframes bounce {
@@ -789,170 +936,243 @@ footer p {
 
 /* -----Abschnitt Kontakt------ */
 
-.kontakt{
-  max-width: 1500px;
-  height: auto;
-  margin:auto;
-}
-.kontakt article{
-  width: 100%;
-  height: auto;
-  margin-top: 200px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.kontakt article h1{
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  font-family: var(--über-text);
-  margin-bottom: 1rem;
-}
-.kontakt article hr{
-  width: 50px;
-  height: 2px;
-  margin: 1rem auto 0;
-  background-color: silver;
-  border: none;
-}
-.kontakt article p{
-  font-size: 1.2rem;
-  font-weight: 300;
-  width: 80%;
-  margin:3rem auto 1rem;
-  text-align: center;
-}
-.kontakt article strong a{
-  font-size: 1.7rem;
-  text-decoration: none;
-  color: black;
-  padding: 5px;
-}
-.kontakt article strong a:hover{
-  box-shadow: -5px 5px 10px black;
-  transition:  0.3s ease;
-  border-radius: 10px;
-}
-.kontakt article:nth-child(2){
-  height: auto;
-  margin-top: 50px;
-}
-.kontakt form{
-  width: 80%;
-  height: auto;
-  border: 10px solid rgb(209, 207, 207);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin:2rem auto 0;
-  z-index: 2;
-  background-color: white;
-}
-.kontakt form h4{
-  margin: 1rem auto;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: silver;
-}
-.kontakt form>span{
-  display: flex;
-  width: 80%;
-  gap: 1rem;
-  margin: 5rem auto 0; 
-  justify-content: space-between;
-}
-.kontakt>form>span>span {
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-}
-.kontakt form input{
-  width: 100%;
-  height: 50px;
-  font-size: 20px;
-  margin-bottom: 1rem;
-  border-radius:0;
-  border: 1px solid silver;
-}
-.kontakt form input::placeholder {
-  padding-left: 1rem;
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgb(104, 104, 104);
-}
-.kontakt form textarea{
-  width: 80%;
-  height: 300px;
-  margin: 0 auto;
-  padding-bottom: 250px; 
-  box-sizing: border-box;
-  resize: none; 
-}
-.kontakt form textarea::placeholder{
-  padding: 10px;
-  font-size: 1rem;
-}
-.senden{
-  width: 80%;
-  margin:1rem auto;
-  padding: 1rem;
-  border: 1px solid silver;
-  border-radius: 0;
-  font-weight: 300;
-  font-size: 1.5rem;
-  font-family: var(--über-text);
-  transition: 0.3s ease;
-  background-color: white;
-  color:rgb(121, 121, 121);
-  box-shadow: 0 5px 20px silver;
-}
-.senden:hover{
-  box-shadow: 0px 10px 10px silver;
-  border:3px solid rgb(96, 96, 96);
-}
-.kontakt-link{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
-  width: 100%;
-  margin: 2rem 0;
-}
-.kontakt-link span {
-  width:100%;
-  padding: 5px;
-  text-decoration: none;
-  color: black;
-  border: 2px solid silver;
-}
-.kontakt-link span:hover{
-  box-shadow: 0 5px 10px black;
-  transition: 0.6s ease;
-}
-.kontakt-link h2{
-  text-align: center;
-  font-family: var(--über-text);
-  font-weight:400;
-  margin: 10px;
-}
-.kontakt-link p{
-  margin: 0;
-  text-align: center;
-  font-family: var(--über-text);
-  font-weight: 300;
+/* ====================== CONTACT PAGE (kontakt.html) ====================== */
+
+.contact-hero {
+    height: 50vh;
+    min-height: 400px;
+    background-image: url('bilder/hero-contact.avif'); /* غير الصورة لو عندك صورة مناسبة */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
-.kontakt-link span:nth-of-type(1) { grid-column: 2 / 3; grid-row: 1; }
-.kontakt-link span:nth-of-type(2) { grid-column: 3 / 4; grid-row: 1; }
-.kontakt-link span:nth-of-type(3) { grid-column: 4 / 5; grid-row: 1; }
-.kontakt-link span:nth-of-type(4) { grid-column: 5 / 6; grid-row: 1; }
-
-iframe{
-  width: 100%;
-  height: 80vh;
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
+.contact-hero h1,
+.contact-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.contact-hero p {
+    font-size: 1.35rem;
+    max-width: 700px;
+    opacity: 0.95;
+}
+
+/* ====================== CONTACT SECTION ====================== */
+.contact-section {
+    padding: 80px 20px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* الكروت */
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2,
+.info-card h2 {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+/* الفورم */
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    transition: border 0.3s;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+    outline: none;
+    border-color: #222;
+    box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.1);
+}
+
+.form-card textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--black);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+/* معلومات الاتصال */
+.info-card .info-item {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+}
+
+.info-card .info-item i {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-top: 4px;
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    color: var(--black);
+}
+
+.info-card p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.info-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+.booking-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.booking-btn:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+}
+
+/* الخريطة */
+.map-container {
+    padding: 0 20px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 480px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* زرار واتساب العائم */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 15px 80px;
+    }
+    
+    .map-container iframe {
+        height: 380px;
+    }
+    
+    .contact-hero {
+        height: 40vh;
+        min-height: 320px;
+    }
+}
 
 /* ----footer element ------- */
 footer{
