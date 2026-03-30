@@ -1,191 +1,187 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<title data-en="Contact Us">اتصل بنا</title>
-
-<style>
-
-/* ===== RESET ===== */
-body{
-margin:0;
-font-family: 'Roboto', sans-serif;
-background:#f9f9f9;
-}
-
-/* ===== HEADER ===== */
-header{
-display:flex;
-justify-content:space-between;
-padding:15px 20px;
-background:black;
-color:white;
-}
-
-/* ===== HERO ===== */
-.hero{
-height:50vh;
-background:url('bilder/leistungen_bild1.avif') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:2rem;
-}
-
-/* ===== CONTACT ===== */
-.contact-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-padding:50px;
-}
-
-/* كروت */
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* الفورم */
-input, textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-button{
-background:black;
-color:rgb(253, 253, 253);
-padding:12px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-}
-
-/* معلومات */
-.info-box h3{
-color:black;
-}
-
-/* خريطة */
-iframe{
-width:100%;
-border-radius:10px;
-}
-
-/* واتساب */
-.whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:25px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>اتصل بنا | L’Arte dei Capelli</title>
 </head>
-
 <body>
 
-<header>
-<h2 data-en="L’Arte dei Capelli">لآرتي دي كابيلي</h2>
+<header> 
+    <div class="header-container">
+        <!-- اللوجو -->
+        <div class="logo">
+            <h2><span class="brand-name"></span></h2>
+            <h3><a href="index.html" data-en="frezar" data-ar="فريزر"></a></h3>
+        </div>
 
-<div>
-<button onclick="switchLanguage('ar')">AR</button>
-<button onclick="switchLanguage('en')">EN</button>
-</div>
+        <!-- الجزء اليميني: اللغة + الموبايل مينيو -->
+        <div class="header-right">
+            <div class="language-switcher">
+                <button onclick="switchLanguage('ar')" id="btn-ar" class="active">AR</button>
+                <button onclick="switchLanguage('en')" id="btn-en">EN</button>
+            </div>
+
+            <!-- Mobile Menu Medium -->
+            <details class="mobile-menu medium"> 
+                <summary> 
+                    <i class="fa-solid fa-bars"></i> 
+                    <i class="fa-solid fa-xmark"></i> 
+                </summary> 
+                <ul> 
+                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+                    <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+                    <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+                    <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+                    <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+                </ul> 
+            </details> 
+
+            <!-- Mobile Menu Small -->
+            <details class="mobile-menu small"> 
+                <summary class="toggle-button"> 
+                    <span class="toggle-text open"><i class="fa-solid fa-bars"></i></span>
+                    <span class="toggle-text close"><i class="fa-solid fa-xmark"></i> </span>
+                </summary> 
+                <ul> 
+                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li> 
+                    <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li> 
+                    <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li> 
+                    <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li> 
+                    <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li> 
+                </ul> 
+            </details>
+        </div>
+    </div>
 </header>
 
-<!-- HERO -->
-<div class="hero">
-<h1 data-en="Contact Us">اتصل بنا</h1>
-</div>
+<!-- قائمة الكمبيوتر -->
+<nav class="desktop-menu">
+    <ul>
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+        <li><a href="team.html" data-en="Team" data-ar="الفريق">الفريق</a></li>
+        <li><a href="leistungen.html" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+        <li><a href="portfolio.html" data-en="Portfolio" data-ar="معرض الأعمال">معرض الأعمال</a></li>
+        <li><a href="kontakt.html" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+    </ul>
+</nav>
 
-<!-- CONTACT -->
-<section class="contact-container">
+<main>
+    <!-- Hero -->
+    <div class="hero contact-hero">
+        <h1 data-en="Contact Us">اتصل بنا</h1>
+        <p data-en="We are here to help you look and feel your best">نحن هنا لمساعدتك على الظهور والشعور بأفضل شكل</p>
+    </div>
 
-<!-- الفورم -->
-<div class="card">
-<h2 data-en="Send Message">ابعت رسالة</h2>
+    <section class="contact-section">
+        <div class="contact-container">
 
-<input type="text" id="name" placeholder="اسمك">
-<input type="email" id="email" placeholder="بريدك">
-<textarea id="msg" placeholder="رسالتك"></textarea>
+            <!-- الفورم -->
+            <div class="contact-card form-card">
+                <h2 data-en="Send us a Message">ابعت لنا رسالة</h2>
+                
+                <input type="text" id="name" placeholder="اسمك الكامل" required>
+                <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                <textarea id="msg" rows="6" placeholder="رسالتك أو استفسارك..." required></textarea>
+                
+                <button onclick="sendMessage()" class="send-btn">إرسال الرسالة</button>
+            </div>
 
-<button onclick="sendMessage()">إرسال</button>
-</div>
+            <!-- معلومات الاتصال -->
+            <div class="contact-card info-card">
+                <h2 data-en="Contact Information">معلومات الاتصال</h2>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3 data-en="Phone">رقم التليفون</h3>
+                        <p><a href="tel:01105263199">01105263199</a></p>
+                    </div>
+                </div>
 
-<!-- معلومات -->
-<div class="card info-box">
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3 data-en="Working Hours">مواعيد العمل</h3>
+                        <p>9:00 صباحاً - 10:00 مساءً</p>
+                    </div>
+                </div>
 
-<h3 data-en="Phone">رقم التليفون</h3>
-<p>01105263199</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3 data-en="Address">العنوان</h3>
+                        <p>القاهرة - مصر</p>
+                    </div>
+                </div>
 
-<h3 data-en="Working Hours">مواعيد العمل</h3>
-<p>9 صباحاً - 10 مساءً</p>
+                <button onclick="bookNow()" class="booking-btn">
+                    <i class="fab fa-whatsapp"></i> احجز موعد عبر واتساب
+                </button>
+            </div>
+        </div>
+    </section>
 
-<h3 data-en="Address">العنوان</h3>
-<p>القاهرة - مصر</p>
+    <!-- خريطة -->
+    <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</main>
 
-<button onclick="bookNow()" style="margin-top:15px;">
-احجز الآن
-</button>
-
-</div>
-
-</section>
-
-<!-- MAP -->
-<div style="padding:30px;">
-<iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/201105263199" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
+<!-- زرار واتساب ثابت -->
+<a href="https://wa.me/201105263199" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
+<footer>
+    <div class="footer-links">
+        <a href="kontakt.html" data-en="Contact Us">اتصل بنا</a>
+        <a href="#" data-en="Privacy Policy">سياسة الخصوصية</a>
+        <a href="#" data-en="Facebook">فيسبوك</a>
+        <a href="#" data-en="Instagram">إنستغرام</a>
+    </div>
+    <p data-en="L’Arte dei Capelli 2013–2026">لآرتي دي كابيلي 2013–2026</p>
+</footer>
+
 <script>
+// تبديل اللغة
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-/* ===== LANGUAGE ===== */
-function switchLanguage(lang){
-document.documentElement.lang=lang;
-document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-en]').forEach(el => {
+        if (!el.dataset.ar) el.dataset.ar = el.innerHTML.trim();
+        el.innerHTML = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+    });
 
-document.querySelectorAll('[data-en]').forEach(el=>{
-if(!el.dataset.ar) el.dataset.ar=el.innerHTML;
-el.innerHTML=lang==='en'?el.dataset.en:el.dataset.ar;
-});
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
 }
 
-/* ===== SEND MESSAGE ===== */
-function sendMessage(){
-let name=document.getElementById('name').value;
-let msg=document.getElementById('msg').value;
+// إرسال الرسالة عبر واتساب
+function sendMessage() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('msg').value.trim();
 
-let text=`الاسم: ${name} - الرسالة: ${msg}`;
-window.open(`https://wa.me/201105263199?text=${encodeURIComponent(text)}`);
+    if (!name || !msg) {
+        alert("يرجى ملء الاسم والرسالة على الأقل");
+        return;
+    }
+
+    const text = `اسمي: ${name}%0Aالإيميل: ${email}%0Aالرسالة: ${msg}`;
+    window.open(`https://wa.me/201105263199?text=${text}`, '_blank');
 }
 
-/* ===== BOOK ===== */
-function bookNow(){
-window.open(`https://wa.me/201105263199?text=عايز احجز موعد`);
+// حجز موعد
+function bookNow() {
+    window.open(`https://wa.me/201105263199?text=عايز%20احجز%20موعد%20في%20صالون%20L’Arte%20dei%20Capelli`, '_blank');
 }
-
 </script>
 
 </body>
